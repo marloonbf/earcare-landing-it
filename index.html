@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speciale Udito: supporto naturale per le orecchie dopo i 45 anni</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: #e5e7eb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 10px 16px;
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    header span.logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    header span.divider {
+      opacity: 0.4;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 24px auto 40px;
+      padding: 0 10px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+      padding: 22px 18px 28px;
+    }
+
+    .badge-top {
+      display: inline-block;
+      background: #b91c1c;
+      color: #fef2f2;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: #020617;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 18px;
+      align-items: center;
+    }
+
+    .hero-text {
+      flex: 1 1 260px;
+      font-size: 14px;
+    }
+
+    .hero-img {
+      flex: 1 1 260px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-img img {
+      max-width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+    }
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      color: #4b5563;
+      margin: 10px 0 16px;
+    }
+
+    .author-photo {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #e0f2fe, #fee2e2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .highlight {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 10px 12px;
+      font-size: 13px;
+      margin: 12px 0 18px;
+    }
+
+    h2 {
+      font-size: 19px;
+      margin: 16px 0 8px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 15px 0 8px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 6px 0 10px 18px;
+      font-size: 14px;
+    }
+
+    ul li {
+      margin-bottom: 4px;
+    }
+
+    .two-cols {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 10px 0 14px;
+      align-items: flex-start;
+    }
+
+    .two-cols .col {
+      flex: 1 1 260px;
+    }
+
+    .warning-box {
+      background: #fee2e2;
+      border-left: 4px solid #dc2626;
+      padding: 10px 12px;
+      font-size: 13px;
+      margin: 14px 0;
+    }
+
+    .stock-box {
+      background: #ecfdf5;
+      border-radius: 10px;
+      border: 1px solid #bbf7d0;
+      padding: 12px 12px;
+      margin: 16px 0;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stock-box .left {
+      max-width: 60%;
+    }
+
+    .stock-box strong {
+      color: #047857;
+    }
+
+    .stock-box span#stock-count {
+      font-weight: 700;
+    }
+
+    .timer {
+      font-weight: 700;
+      color: #b91c1c;
+    }
+
+    .cta-box {
+      text-align: center;
+      margin: 22px auto 8px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #16a34a;
+      color: #ffffff;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.35);
+      transition: background 0.15s ease, transform 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    .cta-btn:hover {
+      background: #15803d;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(21, 128, 61, 0.45);
+    }
+
+    .cta-sub {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    .divider {
+      border-top: 1px solid #e5e7eb;
+      margin: 20px 0 16px;
+    }
+
+    .review {
+      background: #f9fafb;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      padding: 10px 12px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .review strong {
+      display: block;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .footer-note {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 18px 12px 22px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .hero {
+        flex-direction: column;
+      }
+
+      .stock-box .left {
+        max-width: 100%;
+      }
+
+      .cta-btn {
+        width: 100%;
+        max-width: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="logo">SALUTE &amp; BENESSERE</span>
+    <span class="divider">•</span>
+    <span>Rubrica speciale udito 2025</span>
+  </header>
+
+  <div class="wrapper">
+    <article class="card">
+      <div class="badge-top">Articolo informativo</div>
+
+      <h1>
+        Nuovo supporto naturale per chi soffre di ronzio, dolore e infiammazione
+        alle orecchie dopo i 45 anni
+      </h1>
+
+      <section class="hero">
+        <div class="hero-text">
+          <div class="author-box">
+            <div class="author-photo">Dott.</div>
+            <div>
+              <strong>Redazione Salute – Dr. L. Romano*</strong><br />
+              Specialista in benessere dell’udito – contenuto a scopo informativo
+            </div>
+          </div>
+
+          <p>
+            Molte persone in Italia, soprattutto dopo i 45–50 anni, iniziano a
+            notare <strong>ronzio costante, fastidio, sensazione di orecchio
+            “pieno”</strong> o piccoli cali di udito. Spesso si pensa che sia
+            solo “stanchezza” o “età”, ma trascurare questi segnali può
+            peggiorare molto la qualità di vita.
+          </p>
+          <p>
+            Negli ultimi mesi, diversi lettori ci hanno chiesto informazioni su
+            un <strong>supporto naturale in capsule</strong>, studiato proprio
+            per aiutare il benessere delle orecchie nella fascia di età 40+.
+            In questo articolo riassumiamo ciò che abbiamo scoperto.
+          </p>
+        </div>
+
+        <div class="hero-img">
+          <!-- TROQUE ESSA URL por uma imagem neutra profissional de saúde/udito -->
+          <img
+            src="./photo_5005886668594154266_x.jpg"
+            alt="Illustrazione di benessere dell’udito"
+          />
+        </div>
+      </section>
+
+      <div class="highlight">
+        <strong>Attenzione:</strong> questo articolo non sostituisce il parere
+        medico. In caso di dolore forte, febbre, secrezioni o perdita improvvisa
+        dell’udito, è importante rivolgersi subito a uno specialista.
+      </div>
+
+      <h2>Perché dopo i 45 anni le orecchie diventano più sensibili</h2>
+
+      <section class="two-cols">
+        <div class="col">
+          <p>
+            Con il passare degli anni, l’orecchio interno e le piccole strutture
+            coinvolte nell’udito diventano più sensibili a:
+          </p>
+          <ul>
+            <li>Rumori forti e ambienti rumorosi</li>
+            <li>Infiammazioni ricorrenti e raffreddori</li>
+            <li>Accumulo di cerume e secchezza</li>
+            <li>Problemi di circolazione locale</li>
+            <li>Stile di vita stressante</li>
+          </ul>
+          <p>
+            Tutto questo può generare il classico
+            <strong>“fischio” o ronzio nelle orecchie (acufene)</strong>,
+            sensazione di pressione interna e disagio nella vita quotidiana.
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            Per molte persone non si tratta di una patologia grave, ma di una
+            condizione fastidiosa che influisce sul sonno, sulla concentrazione
+            e sull’umore. Per questo cresce l’interesse verso soluzioni naturali
+            di supporto, da affiancare ai controlli regolari con lo specialista.
+          </p>
+        </div>
+      </section>
+
+      <h2>Che cos’è Earlick Forte – IT?</h2>
+      <p>
+        Earlick Forte – IT è un integratore alimentare pensato per supportare il
+        <strong>benessere dell’udito e delle orecchie</strong> nelle persone
+        adulte. La formula combina ingredienti selezionati che contribuiscono
+        alla normale funzione dell’udito, alla protezione dallo stress
+        ossidativo e a una buona microcircolazione.
+      </p>
+      <p>
+        Non si tratta di un farmaco e non sostituisce una terapia medica,
+        ma può rappresentare un aiuto quotidiano per chi vuole prendersi cura
+        dell’udito con maggiore attenzione.
+      </p>
+
+      <h3>Benefici riportati dagli utilizzatori</h3>
+      <ul>
+        <li>Sostegno al benessere complessivo dell’orecchio</li>
+        <li>Supporto alla normale microcircolazione</li>
+        <li>Aiuto nella gestione del fastidio da rumore costante</li>
+        <li>
+          Supporto nei periodi di maggiore sensibilità (freddo, stress, stanchezza)
+        </li>
+      </ul>
+
+      <div class="warning-box">
+        <strong>Importante:</strong> i risultati possono variare da persona a
+        persona. Gli integratori alimentari non devono essere intesi come
+        sostituti di una dieta variata ed equilibrata e di uno stile di vita
+        sano. Prima dell’uso si consiglia di leggere sempre l’etichetta
+        ufficiale del prodotto.
+      </div>
+
+      <h2>La storia di Maria, 62 anni, Milano</h2>
+      <p>
+        Maria ci racconta che da anni conviveva con un ronzio costante in
+        entrambe le orecchie. La sera faceva fatica ad addormentarsi e spesso
+        alzava il volume della TV, con l’irritazione del marito.
+      </p>
+      <p>
+        Dopo aver consultato il suo medico ed escluso problemi più seri, ha
+        deciso di provare un supporto naturale per l’udito. Tra le opzioni
+        disponibili, ha scelto Earlick Forte – IT, assumendolo regolarmente
+        secondo le indicazioni presenti sulla confezione.
+      </p>
+      <p>
+        Dopo alcune settimane di utilizzo, Maria riferisce di percepire il
+        ronzio come <strong>meno intenso</strong> e di riuscire a concentrarsi
+        meglio durante la lettura serale. Il marito nota che il volume della TV
+        è tornato a livelli più bassi. La sua è un’esperienza personale, che non
+        rappresenta una garanzia di risultato per tutti, ma mostra come molte
+        persone cerchino un supporto in più per il proprio udito.
+      </p>
+
+      <div class="stock-box">
+        <div class="left">
+          <strong>Nota per i nostri lettori:</strong><br />
+          Per l’Italia è attualmente attiva una promozione dedicata ai nuovi
+          clienti che richiedono Earlick Forte – IT attraverso la pagina
+          ufficiale.
+        </div>
+        <div>
+          Disponibili: <span id="stock-count">18</span> confezioni<br />
+          <small>
+            Offerta valida ancora per <span class="timer" id="timer">09:59</span>
+            minuti.
+          </small>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <!-- SUBSTITUA AQUI pelo SEU LINK DE TRACKING da AdCombo -->
+        <a
+          class="cta-btn"
+          href="https://uh5adb6f8fuh.uewhbgfvds.cc/?target=-7EBNQCgQAAAfApAQDUo4ABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Vai alla pagina ufficiale di Earlick Forte →
+        </a>
+        <div class="cta-sub">
+          Offerta disponibile solo per residenti in <strong>Italia</strong> di
+          età superiore ai 18 anni.
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2>Opinioni di altri lettori</h2>
+
+      <div class="review">
+        <strong>Giuseppe R., 58 anni – Torino</strong>
+        “Il rumore di fondo che sentivo la sera mi dava fastidio. Dopo qualche
+        settimana di utilizzo lo percepisco meno invadente. Continuo a seguire i
+        consigli del mio medico, ma questo supporto naturale mi sta aiutando.”
+      </div>
+
+      <div class="review">
+        <strong>Lucia M., 67 anni – Roma</strong>
+        “Da anni ho orecchie molto sensibili. Ho deciso di provare Earlick
+        Forte – IT come supporto. Insieme ai controlli regolari dall’otorino,
+        sento le orecchie meno ‘piene’ e mi sento più tranquilla.”
+      </div>
+
+      <div class="review">
+        <strong>Paolo S., 52 anni – Firenze</strong>
+        “Lavoro in un ambiente rumoroso e cercavo qualcosa per prendermi più
+        cura dell’udito. Non è una cura miracolosa, ma mi sento più protetto e
+        ho deciso di proseguire il ciclo.”
+      </div>
+
+      <div class="footer-note">
+        *Nome e immagine del professionista sono illustrativi. Il contenuto ha
+        scopo puramente informativo e non sostituisce il parere medico. Consultare
+        sempre il proprio medico o specialista di fiducia prima di iniziare
+        qualsiasi integrazione.
+      </div>
+
+      <div class="footer-note">
+        Questo sito non è il sito ufficiale di Earlick Forte – IT, ma una pagina
+        informativa indipendente che reindirizza alla pagina ufficiale del
+        produttore.
+      </div>
+    </article>
+  </div>
+
+  <script>
+    // Timer regressivo (10 minuti)
+    (function () {
+      var totalSeconds = 10 * 60;
+      var timerEl = document.getElementById("timer");
+
+      function updateTimer() {
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+
+        timerEl.textContent =
+          String(minutes).padStart(2, "0") +
+          ":" +
+          String(seconds).padStart(2, "0");
+
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          setTimeout(updateTimer, 1000);
+        }
+      }
+
+      updateTimer();
+    })();
+
+    // Estoque visual
+    (function () {
+      var stockEl = document.getElementById("stock-count");
+      var stock = 18;
+
+      function reduceStock() {
+        if (stock > 6) {
+          stock--;
+          stockEl.textContent = stock;
+          var next = Math.floor(Math.random() * 40) + 35; // entre 35–75s
+          setTimeout(reduceStock, next * 1000);
+        }
+      }
+
+      setTimeout(reduceStock, 20000); // começa após 20s
+    })();
+  </script>
+</body>
+</html>
